@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="calculadora.js"></script>
+</head>
+<body>
+    <div id="principal">
+        <div id="form">
+            <form>
+                <input 
+                type = "text"
+                id = "valores"
+                disabled = "disabled"
+                >
+            </form>
+        </div>
+
+        <div id="botoes">
+
+            <table>
+
+                <!-- Sinais -->
+                <tr class="tr-numeros">
+                    <td><button>+</button></td>
+                    <td><button>-</button></td>
+                    <td><button>x</button></td>
+                    <td><button>/</button></td>
+                </tr>
+    
+                <!--Numeros-->
+                <tr class="tr-numeros">
+                    <td><button onclick="pegarNumero(9)">9</button></td>
+                    <td><button onclick="pegarNumero(8)">8</button></td>
+                    <td><button onclick="pegarNumero(7)">7</button></td>
+                    <td rowspan="2"><button id="igual">=</button></td>
+    
+                </tr>
+    
+                <tr class="tr-numeros">
+                    <td><button onclick="pegarNumero(6)">6</button></td>
+                    <td><button onclick="pegarNumero(5)">5</button></td>
+                    <td><button onclick="pegarNumero(4)">4</button></td>
+    
+                </tr>
+    
+                <tr class="tr-numeros">
+                    <td><button onclick="pegarNumero(3)">3</button></td>
+                    <td><button onclick="pegarNumero(2)">2</button></td>
+                    <td><button onclick="pegarNumero(1)">1</button></td>
+                    <td><button onclick="pegarNumero(0)">0</button></td>
+                </tr>
+    
+                <tr>
+                    <td colspan="4"><button id="limpar" onclick="limpar()">Limpar</button></td>
+
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

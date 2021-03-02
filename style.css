@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#principal{
+    margin: 0 auto;
+    margin-top: 50px;
+
+    border-radius: 10px;
+
+    width: 500px;
+    height: 680px;
+
+    text-align: center;
+    background-color: #67706d;
+}
+
+input#valores{
+    width: 340px;
+    height: 50px;
+
+    font-size: 2em;
+    text-align: right;
+    color: rgb(95, 95, 95);
+
+    margin-top: 20%;
+}
+
+input#valores:focus{
+    outline: none;
+}
+
+input#valores:disabled{
+    background-color: #fff;
+    border:none;
+}
+
+div#botoes{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+td button{
+    font-size: 1.5em;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    border: none;
+}
+
+td button:hover{
+    background-color: rgb(199, 199, 199);
+}
+
+button#igual {
+    height: 160px;
+
+    color: #fff;
+    background-color: #4ECA68;
+    border: none;
+}
+
+button#igual:hover{
+    background-color: #45bd5f;
+}
+
+button#limpar{
+    width: 320px;
+
+    color: #fff;
+    background-color: #C93A4B;
+    border: none;
+}
+
+button#limpar:hover{
+    background-color: #B03342;
+}
