@@ -1,8 +1,3 @@
-function pegarNumero(num){
-    document.getElementById("valores").value += num;
-}
-
-function limpar(){
-    document.getElementById("valores").value = "";
-}
+const calculadora = document.querySelector('#principal')
+const keys = calculadora.querySelector("div#botoes table tr.tr-numeros")
 
