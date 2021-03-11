@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+html{
+    box-sizing: border-box;
+}
 
 #principal{
     margin: 0 auto;
@@ -11,29 +14,21 @@
 
     width: 500px;
     height: 680px;
+    text-align: center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #67706d;
+    background-color: #8a8b8b;
 }
 
-#calculadora{
-    display: grid;
-}
 
 input#valores{
     width: 340px;
-    height: 50px;
-
-    grid-column: span 4;
+    height: 70px;
 
     font-size: 2em;
     text-align: right;
     color: rgb(95, 95, 95);
 
-    margin-top: 20%;
+    margin-top: 17%;
     margin-bottom: 20px;
 }
 
@@ -46,14 +41,28 @@ input#valores:disabled{
     border:none;
 }
 
-#calculadora button{
+#botoes-area{
+    width: 340px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botoes{
     display: grid;
-    
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#botoes button{
+    display: grid;
     font-size: 1.5em;
 
-    margin: 5px 7px;
-    width: 70px;
-    height: 70px;
+    width: 84px;
+    height: 84px;
     
     border: none;
     place-items: center;
@@ -66,11 +75,11 @@ button:hover{
 
 button#limpar, button#igual{
     grid-column: span 2;
-
-    width: 158px;
+    width: 169px;
 }
 
 button#igual{
+
     color: #fff;
     background-color: #4ec76a;
 }
@@ -90,6 +99,5 @@ button#limpar:hover{
 
 button#somar{
     grid-row: span 2;
-
-    height: 150px;
+    height: 169px;
 }

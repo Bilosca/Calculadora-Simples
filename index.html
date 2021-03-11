@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="calculadora.js"></script>
 </head>
 <body>
     <div id="principal">
-            <form id="calculadora">
-                <input 
-                type = "text"
-                id = "valores"
-                disabled = "disabled"
-                >
+        <form id="calculadora">
+            <input 
+            type = "text"
+            id = "valores"
+            disabled = "disabled"
+            >
 
+        </form>
+
+        <div id="botoes-area">
+            <div id="botoes">
                 <button data-acao ="limpa" id="limpar">Ac</button>
-
+    
                 <button class = "operador" data-acao ="divide">/</button>
                 <button class = "operador" data-acao ="multiplica">x</button>
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
                 <button class = "operador" data-acao ="subtrai">-</button>
-
+    
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
@@ -32,13 +35,17 @@
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-
+    
                 <button data-acao ="decimal">.</button>
                 <button>0</button>
                 <button data-acao="calcula" id="igual">=</button>
+            </div>
+            <script src="calculadora.js"></script>
 
-            </form>
         </div>
+
+    </div>
+
 
     </div>
     
