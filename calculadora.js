@@ -1,33 +1,65 @@
+// Selecao de Elementos HTML
 const calculadora = document.querySelector('#principal')
 const keys = calculadora.querySelector("div#botoes-area div#botoes")
+const display = document.querySelector("#valores")
 
+// Captura o evento do "click"
 keys.addEventListener("click", e =>{
+
+    //Se o target do click for o botao:
+    //  Key recebe o botao clicado
+    //  acao recebe o dataSet do botao
+    //  conteudoKey recebe o conteudo do botao
+    //  displayedNumbers recebe o valor a mostra no input
+    //  TipoBotaoAnterior e um data-*
     if(e.target.matches("button")){
         const key = e.target
         const acao = key.dataset.acao
-    
+        const conteudoKey = key.textContent
+        const displayedNumbers = display.value
+        const tipoBotaoAnterior = calculadora.dataset.tipoBotaoAnterior
+
+        //Se o dataSet nao for uma acao entao e um numero
         if(!acao){
-            console.log("numero")
+
+            //Caso o numero no input seja 0 || o tipo do botao for "operador":
+            if(displayedNumbers === "0" || tipoBotaoAnterior === "operador"){
+                display.value = conteudoKey
+            }
+            else{
+                display.value = displayedNumbers + conteudoKey
+            }
         }
 
+        //se a acao for igual um dos operadores:
+        //  Adiciona uma nova classe no botao
+        //  define o TipoBotaoAnterior como "operador"  
         if( acao === "soma" ||
             acao === "subtrai" ||
             acao === "multiplica" || 
             acao === "divide"){
-                console.log("operador")
+                key.classList.add("isDepressed")
+                calculadora.dataset.tipoBotaoAnterior = "operador"
+                console.log(key.classList)
             }
         
+        // Se a acao for igual o operador de igual
         if(acao === "calcula"){
             console.log("igual")
         }
 
+        // se a acao for igual o operador decimal
         if(acao === "decimal"){
-            console.log("decimal")
+            display.value = displayedNumbers + "."
         }
 
+        // se a acao for limpar
         if(acao ==="limpa"){
-            console.log("limpa")
+            display.value = ""
         }
+
+
+
     }
 })
 

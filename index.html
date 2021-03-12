@@ -12,33 +12,33 @@
             type = "text"
             id = "valores"
             disabled = "disabled"
+            placeholder="0"
             >
 
         </form>
 
         <div id="botoes-area">
-            <div id="botoes">
-                <button data-acao ="limpa" id="limpar">Ac</button>
-    
+            <div id="botoes">    
                 <button class = "operador" data-acao ="divide">/</button>
                 <button class = "operador" data-acao ="multiplica">x</button>
+                <button class = "operador" data-acao ="subtrai">-</button>
+                <button class = "operador" id="somar" data-acao ="soma">+</button>
+
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button class = "operador" data-acao ="subtrai">-</button>
-    
+                <button data-acao="calcula" id="igual">=</button>
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button class = "operador" id="somar" data-acao ="soma">+</button>
-                
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
     
-                <button data-acao ="decimal">.</button>
                 <button>0</button>
-                <button data-acao="calcula" id="igual">=</button>
+                <button data-acao ="decimal">.</button>
+                <button data-acao ="limpa" id="limpar">Ac</button>
+
             </div>
             <script src="calculadora.js"></script>
 
