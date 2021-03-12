@@ -13,3 +13,8 @@ Com o intuito de aprender os métodos do DOM e usurfruir mais do JavaScript
 ### 10/03/21
 - Novas modificações na aparência do projeto
 - novo script para melhor funcionabilidade do projeto
+
+### 11/03/21
+- Novas Funcionabilidades no script já possibilitando capturar os numeros e os operadores
+- Modificações na aparencia do projeto
+- Comentários para melhor leitura e entendimento do código
