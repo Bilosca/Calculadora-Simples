@@ -9,25 +9,35 @@ keys.addEventListener("click", e =>{
     //Se o target do click for o botao:
     //  Key recebe o botao clicado
     //  acao recebe o dataSet do botao
-    //  conteudoKey recebe o conteudo do botao
+    //  botaoPressionado recebe o conteudo do botao
     //  displayedNumbers recebe o valor a mostra no input
     //  TipoBotaoAnterior e um data-*
     if(e.target.matches("button")){
         const key = e.target
         const acao = key.dataset.acao
-        const conteudoKey = key.textContent
+        const botaoPressionado = key.textContent
         const displayedNumbers = display.value
         const tipoBotaoAnterior = calculadora.dataset.tipoBotaoAnterior
+
+
+        Array.from(key.parentNode.children).forEach(
+            k => k.classList.remove("isDepressed"))
+        console.log(calculadora.dataset)
 
         //Se o dataSet nao for uma acao entao e um numero
         if(!acao){
 
             //Caso o numero no input seja 0 || o tipo do botao for "operador":
             if(displayedNumbers === "0" || tipoBotaoAnterior === "operador"){
-                display.value = conteudoKey
+                display.value = botaoPressionado 
+                calculadora.dataset.tipoBotaoAnterior = ""
+               
             }
             else{
-                display.value = displayedNumbers + conteudoKey
+                display.value = displayedNumbers + botaoPressionado
+
+                if(botaoPressionado === "0")
+                    display.value = displayedNumbers + botaoPressionado
             }
         }
 
@@ -39,8 +49,8 @@ keys.addEventListener("click", e =>{
             acao === "multiplica" || 
             acao === "divide"){
                 key.classList.add("isDepressed")
+
                 calculadora.dataset.tipoBotaoAnterior = "operador"
-                console.log(key.classList)
             }
         
         // Se a acao for igual o operador de igual
@@ -57,8 +67,7 @@ keys.addEventListener("click", e =>{
         if(acao ==="limpa"){
             display.value = ""
         }
-
-
+        console.log(key.classList)
 
     }
 })
