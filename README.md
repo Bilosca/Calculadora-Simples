@@ -18,3 +18,6 @@ Com o intuito de aprender os métodos do DOM e usurfruir mais do JavaScript
 - Novas Funcionabilidades no script já possibilitando capturar os numeros e os operadores
 - Modificações na aparencia do projeto
 - Comentários para melhor leitura e entendimento do código
+
+### 12/03/21
+- Correção do bug no qual os números não concatenavam após clicar no operador
