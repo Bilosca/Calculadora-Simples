@@ -12,8 +12,8 @@ html{
 
     border-radius: 10px;
 
-    width: 500px;
-    height: 680px;
+    width: 450px;
+    height: 650px;
     text-align: center;
 
     background-color: #8a8b8b;
@@ -61,8 +61,11 @@ input#valores:disabled{
     background-color: rgb(228, 228, 228);
 }
 
-#botoes button.isDepressed{
-    background-color: rgb(230, 207, 207);
+
+
+
+#botoes button:active, #botoes button:focus{
+    outline: none;
 }
 
 #botoes button{
@@ -83,26 +86,30 @@ input#valores:disabled{
 }
 
 button#igual{
-    grid-row: span 3;
-    height: 254px;
+    grid-row: span 4;
+    height: 339px;
     color: #fff;
-    background-color: #4ec76a;
+    background-color: #6ad182;
 }
 
 button#igual:hover{
-    background-color: #44b15e;
+    background-color: #69c47e;
 }
 
 button#limpar{
-    grid-column: span 2;
-    width: 169px;
 
     color: #fff;
-    background-color: #ac313f;
+    background-color: #c54251;
 }
 
 button#limpar:hover{
-    background-color: #972e3a;
+    background-color: #a0414c;
+}
+
+#botoes button.isDepressed, 
+#botoes button.isDepressed:hover{
+    box-shadow: inset 0px 0px 20px 3px rgb(114, 255, 177);
+    
 }
 
 

@@ -3,6 +3,26 @@ const calculadora = document.querySelector('#principal')
 const keys = calculadora.querySelector("div#botoes-area div#botoes")
 const display = document.querySelector("#valores")
 
+function calcula(n1, op, n2){
+    n1 = parseFloat(n1)
+    n2 = parseFloat(n2)
+    let resultado = ''
+
+    if(op === "soma"){
+        resultado = n1 + n2
+    }
+    else if(op === "subtrai"){
+        resultado = n1 - n2
+    }
+    else if(op === "multiplica"){
+        resultado = n1 * n2
+    }
+    else if(op === "divide"){
+        resultado = n1 / n2
+    }
+    return resultado
+}   
+
 // Captura o evento do "click"
 keys.addEventListener("click", e =>{
 
@@ -51,11 +71,20 @@ keys.addEventListener("click", e =>{
                 key.classList.add("isDepressed")
 
                 calculadora.dataset.tipoBotaoAnterior = "operador"
+                calculadora.dataset.firstNum = displayedNumbers
+                calculadora.dataset.operador = acao
+            
             }
         
         // Se a acao for igual o operador de igual
         if(acao === "calcula"){
-            console.log("igual")
+
+            const firstNum = calculadora.dataset.firstNum
+            const operador = calculadora.dataset.operador
+            const secondNum = displayedNumbers
+
+            var resultado = calcula(firstNum, operador, secondNum)
+            display.value = resultado
         }
 
         // se a acao for igual o operador decimal
