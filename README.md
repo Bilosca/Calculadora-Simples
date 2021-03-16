@@ -21,3 +21,6 @@ Com o intuito de aprender os métodos do DOM e usurfruir mais do JavaScript
 
 ### 12/03/21
 - Correção do bug no qual os números não concatenavam após clicar no operador
+
+### 13/03/21
+- Incremento das Funções básicas de uma operadora (somar, subtrair, multiplicar, dividir)
